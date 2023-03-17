@@ -5,3 +5,5 @@
 - 프레임워크는 불러오는 것이 아닌 프레임워크에 코드를 불러옴
 
 # 10.2 Creating a Project
+
+- gatsby new > npm run develop
