@@ -23,3 +23,7 @@
 - 빌드 전에는 JS를 받아온 상태처럼 행동하지만
 - npm build 이후 npm run serve를 실행해 소스코드를 확인해보면
 - html에 모든것이 담겨있는 것을 확인 할 수 있다.
+
+# 10.5 Framework Rules
+
+- Page 폴더 안 파일 명으로 라우터 생성 가능 (next와 같음)
