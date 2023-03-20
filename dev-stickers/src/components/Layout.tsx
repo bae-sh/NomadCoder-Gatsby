@@ -23,7 +23,7 @@ export default function Layout({ children, title }: LayoutProps) {
       <main>
         <h1>{title}</h1>
         {children}
-      </main>
+       </main>
     </div>
   );
 }

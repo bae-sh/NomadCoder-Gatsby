@@ -27,3 +27,18 @@
 # 10.5 Framework Rules
 
 - Page 폴더 안 파일 명으로 라우터 생성 가능 (next와 같음)
+
+# 10.6 Layouts
+
+- Head 컴포넌트에 반영하면 가장 위에 나타남
+
+# 10.7 Data Fetching
+
+- reactjs > html 로 만들어주는 기능
+- GraphQL 을 이용해 데이터를 배움
+- 데이터를 어떤 시점에 받아올것인가에 따라 React를 쓸건지 Gatsby를 쓸건지 결정
+
+# 10.8 GraphQL
+
+- GraphQL의 경우 구체적인 정보에 대해서만 가져오게 할 수 있음
+- query{ film(id='1234'){}}
