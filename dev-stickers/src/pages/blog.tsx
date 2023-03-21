@@ -1,15 +1,27 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
-export default function blog() {
+import { graphql, PageProps } from 'gatsby';
+export default function blog({ data }: PageProps<Queries.BlogTitlesQuery>) {
+  console.log(data);
   return (
-    <Layout title={'Welcome my Blog!!'}>
-      <p>news</p>
-
-      <article>
-        <h4>My first post</h4>
-      </article>
+    <Layout title={'Blog'}>
+      <ul>
+        {data.allFile.nodes.map((file, index) => (
+          <li key={index}>{file.name}</li>
+        ))}
+      </ul>
     </Layout>
   );
 }
+
+export const query = graphql`
+  query BlogTitles {
+    allFile {
+      nodes {
+        name
+      }
+    }
+  }
+`;
 export const Head = () => Seo({ title: 'Blog' });
