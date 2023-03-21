@@ -2,24 +2,35 @@ import React from 'react';
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import { graphql, PageProps } from 'gatsby';
-export default function blog({ data }: PageProps<Queries.BlogTitlesQuery>) {
+export default function blog({ data }: PageProps<Queries.BlogPostsQuery>) {
+  // 쿼리의 데이터가 들어감
   console.log(data);
   return (
     <Layout title={'Blog'}>
-      <ul>
-        {data.allFile.nodes.map((file, index) => (
-          <li key={index}>{file.name}</li>
+      <section>
+        {data.allMdx.nodes.map((file, index) => (
+          <article key={index}>
+            <h3>{file.frontmatter?.title}</h3>
+            <h5>{file.frontmatter?.date}</h5>
+            <h5>{file.frontmatter?.author}</h5>
+          </article>
         ))}
-      </ul>
+      </section>
     </Layout>
   );
 }
 
 export const query = graphql`
-  query BlogTitles {
-    allFile {
+  query BlogPosts {
+    allMdx {
       nodes {
-        name
+        frontmatter {
+          category
+          date(formatString: "YYYY.MM.DD")
+          title
+          author
+        }
+        excerpt
       }
     }
   }
