@@ -50,10 +50,22 @@
 - plugin으로 gatsby-source-filesystem 을 깔고
 - option의 path를 설정하면 그 설정 경로의 파일을 개츠비가 확인함
 - export const query = graphql`  query BlogTitles {
-    allFile {
-      nodes {
-        name
-      }
+  allFile {
+    nodes {
+      name
     }
-  }`;
+  }
+}`;
 - 를 사용하면 {data}로 정보가 들어감
+
+# 10.11 MDX
+
+- MDX 플러그인을 사용하면 Gatsby가 우리 파일 안을 볼 수 있음.
+- 플러그인 설치 후 allMdx 폴더를 볼 수 있음.
+
+# 10.12 Dynamic Pages
+
+- slug는 URL의 제목을 써넣기 위해 쓰는 것
+- {mdx.frontmatter\_\_slug.tsx}의 네이밍은 동적으로 만들어줌
+- Mdx 파일은 페이지의 정보를 나타냄
+- 동적 페이지가 2개 이상 안될경우 gatsby clean을 써서 캐시를 제거
