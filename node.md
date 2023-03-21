@@ -42,3 +42,18 @@
 
 - GraphQL의 경우 구체적인 정보에 대해서만 가져오게 할 수 있음
 - query{ film(id='1234'){}}
+- useStaticQuery은 정적 쿼리이고 개츠비가 나의 웹사이트의 html을 만들고 있을떄 돌아감
+- Npm run build를 할때 쿼리가 실행되고 html 문서에 들어감
+
+# 10.10 Page Query
+
+- plugin으로 gatsby-source-filesystem 을 깔고
+- option의 path를 설정하면 그 설정 경로의 파일을 개츠비가 확인함
+- export const query = graphql`  query BlogTitles {
+    allFile {
+      nodes {
+        name
+      }
+    }
+  }`;
+- 를 사용하면 {data}로 정보가 들어감
