@@ -84,3 +84,11 @@
 # 10.15 GatsbyImage
 
 - gatsbyImageData 이용
+
+# 10.16 Contentful
+
+- 콘텐츠를 관리하는 시스템(비 개발자용)
+
+# 10.17 Product Detail
+
+- props로는 url와 같은 여러 값이들어옴
